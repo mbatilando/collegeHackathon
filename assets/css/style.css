@@ -1,0 +1,60 @@
+/* ---------- Some general styles ---------- */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol, li { list-style: none; }
+
+ul, ol {
+	margin-bottom: 36px;
+}
+
+.container {
+	width: 500px;
+	margin: 100px auto;
+	text-align: center;
+}
+
+@font-face{ 
+font-family: 'WebSymbolsRegular';
+src: url('websymbols-regular-webfont.eot');
+src: url('websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+     url('websymbols-regular-webfont.woff') format('woff'),
+     url('websymbols-regular-webfont.ttf') format('truetype'),
+     url('websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+}
+
+
+
+
+/* ---------- Lists ---------- */
+.rating-w-fonts li {
+	font: 25px/50px 'WebSymbolsRegular', sans-serif;
+	display: inline-block;
+
+	color: #202124;
+	text-shadow: 1px 1px 0px #323439;
+	
+	cursor: pointer;
+	margin: 0, auto;
+}
+
+	.rating-w-fonts li.rated, .rating-w-fonts li:hover { color: #EDD51C; }
+
+
+
+.rating-w-images li {
+	width: 27px;
+	height: 30px;
+	background: transparent url('sprites.png') no-repeat -54px 0;
+	display: inline-block;
+	
+	cursor: pointer;
+}
+
+	.rating-w-images li.rated, .rating-w-images li:hover, 
+	.rating-w-images li.half-rated:hover { background-position: 0 0; }
+	
+	.rating-w-images li.half-rated { background-position: -27px 0; }
+

@@ -1,0 +1,93 @@
+#main {
+	 margin: auto;
+	 float: none;
+	}
+
+#content {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#rememberME {
+	color:2D302D;
+	}
+
+#canvasloader-container {
+	margin-top:5px; 
+	margin-left:10px;
+}
+.inputField, .bossSelect, .timesheetSelect {
+	width:150px;
+}
+
+.profileSections {
+	font-weight: bold;
+	color: #71BF44;
+}
+
+td {
+	width:50px;
+}
+
+ul
+{
+list-style-type: none;
+padding: 3px;
+margin: 0px;
+}
+
+#timesheetTable {
+	color: #71BF44;
+}
+
+#loginContainer {
+	height:150px;
+	width:300px;
+}
+
+#profileContainer {
+	height:200px;
+	width:400px;
+}
+
+#profilePic {
+	height:160px;
+	width:175px;
+	float: left;
+	background-image:url('../img/MarcChardon2.jpg');
+	border-radius:10px;
+}
+
+#profileInfo {
+	margin-top: 18px;
+	font: #000;
+	float: left;
+}
+
+/* Flexible iFrame */
+
+.Flexible-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.Flexible-container iframe,   
+.Flexible-container object,  
+.Flexible-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#sideNavBar {
+	background-color: #34495e;
+}
+
+#tab1 {
+	color: #000 !important;
+}
