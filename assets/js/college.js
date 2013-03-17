@@ -38,9 +38,9 @@ $(document).ready(function() {
 		};
 		function createDeadlineNode(deadlineInfo) {
 			var liNode = $('<li>');
-			var html = '';
+			var html = '<input type="checkbox">&nbsp&nbsp&nbsp&nbsp';
 			html += deadlineInfo.day + '-' + deadlineInfo.month + '-' + deadlineInfo.year + " at " + deadlineInfo.time;
-			html += ": " + deadlineInfo.title;
+			html += ": " + deadlineInfo.title + '<br>';
 			liNode.html(html);
 			return liNode;
 		};
@@ -94,5 +94,6 @@ $(document).ready(function() {
 		} else {
 			x.textContent = 'View the Top Contributors for this college';
 		}
+		e.preventDefault();
 	});
 });
