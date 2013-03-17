@@ -1,3 +1,6 @@
+div.tab-content {
+	padding-bottom: 10px;
+}
 div#topNavBar ul {
 	float: right;
 	padding-right: 50px;	
