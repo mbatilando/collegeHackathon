@@ -1,8 +1,4 @@
 $(document).ready(function() {
-	$('#sideNavBar').click(function(){
-
-	});
-
 	$('#login-trigger').click(function(){
 		$(this).next('#login-content').slideToggle();
 		$(this).toggleClass('active');					
@@ -46,9 +42,9 @@ $(document).ready(function() {
 			liNode.html(html);
 			return liNode;
 		};
-		for(var i in data) {
+		for(var i in info) {
 			var key = i;
-			var obj = data[key];
+			var obj = info[key];
 			var tab = findTabDiv(contentParentDiv, key);
 			var mapNode = findTabDiv($('body'), 'map', 'section');
 			if(tab.length || mapNode.length) {
@@ -74,9 +70,8 @@ $(document).ready(function() {
 	
 	populateCollege(data);
 
-	$('a').click(function(e) {
-		// alert($(e.currentTarget).html())
-		e.preventDefault();
+	$('#sideNavBar a').click(function(e) {
 		populateCollege(data2);
+		e.preventDefault();
 	});
 });
