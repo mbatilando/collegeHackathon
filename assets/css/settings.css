@@ -16,6 +16,10 @@ ul li ul {
 li.selected {
 	
 }
+label {
+	display: inline;
+	padding-left: 5px;
+}
 #settings-content a {
 	color: #FFF;
 	text-decoration: none;
