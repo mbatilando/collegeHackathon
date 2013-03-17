@@ -17,7 +17,6 @@ $(document).ready(function() {
 			'deadlines': [{"year":2013,"month":5,"day":26,"title":"Early Application Deadline","time":"4 pm"},{"year":2013,"month":6,"day":05,"title":"Application Deadline","time":"4 pm"}], 
 			'tuition': 'Its in-state tuition and fees are $11,767 (2011-12); out-of-state tuition and fees are $34,645 (2011-12).',
 			'map': 'https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=uc+berkeley&amp;aq=&amp;sll=37.870775,-122.30098&amp;sspn=0.070058,0.134411&amp;t=h&amp;ie=UTF8&amp;hq=uc+berkeley&amp;ll=37.872905,-122.248072&amp;spn=0.021128,0.036214'
-				
 	};
 	
 	function populateCollege(info) {
@@ -41,8 +40,8 @@ $(document).ready(function() {
 			var key = i;
 			var obj = data[key];
 			var tab = findTabDiv(contentParentDiv, key);
-			var mapNode = findTabDiv(contentParentDiv, 'map', 'section').html('');
-			if(tab.length) {
+			var mapNode = findTabDiv($('body'), 'map', 'section');
+			if(tab.length || mapNode.length) {
 				if(key === 'deadlines') {
 					if(obj && obj.length > 0) {
 						var ulNode = $("<ul>");
@@ -52,8 +51,9 @@ $(document).ready(function() {
 						tab.html('').append(ulNode);
 					}
 				} else if(key === 'map') {
-					var iframeNode = $("<iframe>").prop("src", obj);
-					mapNode.append(iframeNode);
+					//var iframeNode = $('<iframe src="' + obj + '"></iframe>').prop("id", 'iframemap');
+					//mapNode.append(iframeNode);
+					//mapNode.html('<iframe id="iframemap" src="' + obj + '"></iframe>');
 				} else {
 					tab.html(obj);
 				}
