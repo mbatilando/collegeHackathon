@@ -3,6 +3,8 @@ $(document).ready(function() {
 
 	});
 
+	$('#qa-table').hide();
+
 	$('#login-trigger').click(function(){
 		$(this).next('#login-content').slideToggle();
 		$(this).toggleClass('active');					
@@ -27,7 +29,6 @@ $(document).ready(function() {
 		'deadlines': [{"year":2013,"month":5,"day":26,"title":"Early Application Deadline","time":"4 pm"},{"year":2013,"month":6,"day":05,"title":"Application Deadline","time":"4 pm"}], 
 		'tuition': 'Its in-state tuition and fees are $11,767 (2011-12); out-of-state tuition and fees are $34,645 (2011-12).',
 		'map': 'https://maps.google.com/maps?q=berkeley+city+college&hl=en&ll=37.872076,-122.269378&spn=0.017514,0.033603&sll=37.6,-95.665&sspn=35.739306,68.818359&t=h&hq=berkeley+city+college&z=15&iwloc=A'
-			
 	};
 
 	function populateCollege(info) {
@@ -78,5 +79,17 @@ $(document).ready(function() {
 		// alert($(e.currentTarget).html())
 		e.preventDefault();
 		populateCollege(data2);
+	});
+
+	$('#tab-qa a').click(function(e) {
+		// alert($(e.currentTarget).html())
+		$('#qa-image').toggle();
+		$('#qa-table').toggle();
+		var x = document.getElementById('contributors');
+		if (x.textContent.indexOf('View') != -1) {
+			x.textContent = 'Hide the Top Contributors for this college';
+		} else {
+			x.textContent = 'View the Top Contributors for this college';
+		}
 	});
 });
