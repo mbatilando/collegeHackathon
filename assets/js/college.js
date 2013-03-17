@@ -9,7 +9,7 @@ $(document).ready(function() {
 	
 	//var data = $.ajax('url');
 	var data = {
-			'result': true,
+			'name': 'University of California, Berkeley',
 			'summary': "University of California--Berkeley is a public institution that was founded in 1868. It has a total undergraduate enrollment of 25,885, its setting is urban, and the campus size is 1,232 acres. It utilizes a semester-based academic calendar. University of California--Berkeley's ranking in the 2013 edition of Best Colleges is National Universities, 21.",
 			'deadlines': [{"year":2013,"month":5,"day":26,"title":"Early Application Deadline","time":"4 pm"},{"year":2013,"month":6,"day":05,"title":"Application Deadline","time":"4 pm"}], 
 			'tuition': 'Its in-state tuition and fees are $11,767 (2011-12); out-of-state tuition and fees are $34,645 (2011-12).',
@@ -17,7 +17,7 @@ $(document).ready(function() {
 	};
 	
 	var data2 = {
-		'result': true,
+		'name': 'Berkeley City College',
 		'summary': "Berkeley City College is part of a group called Peralta Colleges, and is located in Berkeley, California. Founded in 1978 and formerly Vista Community College, BCC serves approximately 5,000 students. The college is known for its outstanding programs in American Sign Language, computer information systems, business, biotechnology, and liberal arts and social sciences. Accredited by the Accrediting Commission for Community and Junior Colleges of the Western Association of Schools and Colleges, BCC offers associate degree programs, and certificate programs in a variety of fields including arts and cultural studies, biotechnology, American Sign Language, business, women?s studies, travel and tourism, global studies, liberal arts, computer information systems, and social services. Students have the option of enrolling in programs designed for transfer to four-year institutions, occupational training classes, or programs in which associate degrees are earned for immediate entry into the workforce.",
 		'deadlines': [{"year":2013,"month":5,"day":26,"title":"Early Application Deadline","time":"4 pm"},{"year":2013,"month":6,"day":05,"title":"Application Deadline","time":"4 pm"}], 
 		'tuition': 'Its in-state tuition and fees are $11,767 (2011-12); out-of-state tuition and fees are $34,645 (2011-12).',
@@ -47,7 +47,7 @@ $(document).ready(function() {
 			var obj = info[key];
 			var tab = findTabDiv(contentParentDiv, key);
 			var mapNode = findTabDiv($('body'), 'map', 'section');
-			if(tab.length || mapNode.length) {
+			if(tab.length) {
 				if(key === 'deadlines') {
 					if(obj && obj.length > 0) {
 						var ulNode = $("<ul>");
@@ -57,22 +57,28 @@ $(document).ready(function() {
 						}
 						tab.html('').append(ulNode);
 					}
-				} else if(key === 'map') {
-					//var iframeNode = $('<iframe src="' + obj + '"></iframe>').prop("id", 'iframemap');
-					//mapNode.append(iframeNode);
-					//mapNode.html('<iframe id="iframemap" src="' + obj + '"></iframe>');
 				} else {
 					tab.html(obj);
 				}
+			} else if(key === 'name') {
+				$("h1#title").html(obj);
+			} else if(key === 'map') {
+				//var iframeNode = $('<iframe src="' + obj + '"></iframe>').prop("id", 'iframemap');
+				//mapNode.append(iframeNode);
+				//mapNode.html('<iframe id="iframemap" src="' + obj + '"></iframe>');
 			}
-			
 		}
 	};
 	
 	populateCollege(data);
 
 	$('#sideNavBar a').click(function(e) {
-		populateCollege(data2);
+		var college = $(e.currentTarget).html();
+		var dataToLoad = data;
+		if(college === 'Berkeley City College') {
+			dataToLoad = data2;
+		}
+		populateCollege(dataToLoad);
 		e.preventDefault();
 	});
 });
