@@ -6,12 +6,32 @@
 	  <link rel="stylesheet" href="assets/css/custom.css" />
 	  <link rel="stylesheet" href="assets/css/flat-ui.css" />
 	  <link rel="stylesheet" href="assets/css/style.css" />
+	  <link rel="stylesheet" href="assets/css/college.css" />
 	  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	  <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 	  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	  <script type="text/javascript" src="assets/js/custom.js"></script>
+	  <script type="text/javascript" src="assets/js/college.js"></script>
 	</head>
 	<body>
+		<div class="row clearfix" id="topNavBar">
+			<ul>
+				<li id="login">
+					<a href="#" id="login-trigger">Log in <span></span></a>
+				<div id="login-content">
+					<form>
+						<fieldset id="inputs">
+							<input id="username" type="email" name="Email" placeholder="Your email address" required>   
+							<input id="password" type="password" name="Password" placeholder="Password" required>
+						</fieldset>
+						<fieldset id="actions">
+							<input type="submit" id="submit" value="Log in">
+							<label><input type="checkbox" checked="checked"> Keep me signed in</label>
+						</fieldset>
+					</form>
+				</div>  
+			</li>
+			</ul>
+		</div>
 		<div class="row">
 			<div id="sideNavBar" class="span5">
 				<a href="#" class="btn btn-large btn-block btn-inverse">University of California, Berkeley</a>
@@ -37,6 +57,7 @@
 					    <li><a href="#tab3" data-toggle="tab">Sports</a></li>
 					    <li><a href="#tab4" data-toggle="tab">Tution</a></li>
 					    <li><a href="#tab5" data-toggle="tab">Deadlines</a></li>
+					    <li><a href="#tab6" data-toggle="tab">Requirements</a></li>
 					  </ul>
 					  <div class="tab-content">
 					    <div class="tab-pane active" id="tab1">
@@ -74,6 +95,9 @@
 					    </div>
 					    <div class="tab-pane" id="tab5">
 					      <p>Nullam diam lacus, mollis id malesuada sit amet, ultrices ac nisl. Quisque a leo sed enim tempor tincidunt ac at leo. Praesent nec semper orci. Aenean id dui sapien, id dictum massa. Sed et quam nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean ante lectus, elementum ut varius at, dignissim non diam. Vivamus metus leo, tempus sed fermentum quis, feugiat id orci. Vivamus sit amet enim dui, porta facilisis nunc. Fusce imperdiet facilisis ante, ac pellentesque elit pharetra ac. Aenean erat nisi, venenatis et varius id, scelerisque vitae elit. Mauris tincidunt leo ultrices est tempor sagittis dapibus felis accumsan. Pellentesque et justo a augue malesuada dapibus. Suspendisse potenti. Integer in sapien ut tortor porttitor dictum.</p>
+					    </div>
+					    <div class="tab-pane" id="tab6">
+					      <p>Requirements Nullam diam lacus, mollis id malesuada sit amet, ultrices ac nisl. Quisque a leo sed enim tempor tincidunt ac at leo. Praesent nec semper orci. Aenean id dui sapien, id dictum massa. Sed et quam nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean ante lectus, elementum ut varius at, dignissim non diam. Vivamus metus leo, tempus sed fermentum quis, feugiat id orci. Vivamus sit amet enim dui, porta facilisis nunc. Fusce imperdiet facilisis ante, ac pellentesque elit pharetra ac. Aenean erat nisi, venenatis et varius id, scelerisque vitae elit. Mauris tincidunt leo ultrices est tempor sagittis dapibus felis accumsan. Pellentesque et justo a augue malesuada dapibus. Suspendisse potenti. Integer in sapien ut tortor porttitor dictum.</p>
 					    </div>
 					  </div>
 					</div>
