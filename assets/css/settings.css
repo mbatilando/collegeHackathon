@@ -1,0 +1,22 @@
+body {
+	background-color: #000;
+}
+#settings-content {
+	background-color: #000;
+	color: #FFF;
+}
+ul {
+}
+li {
+	padding-left: 50px;
+}
+ul li ul {
+	display: none;
+}
+li.selected {
+	
+}
+#settings-content a {
+	color: #FFF;
+	text-decoration: none;
+}
