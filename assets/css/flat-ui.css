@@ -237,8 +237,8 @@ h6 {
   transition: 0.25s;
   -webkit-backface-visibility: hidden; }
   .btn:hover, .btn:focus {
-    background-color: #4e6d8d;
-    color: white;
+    background-color: #FCCE00;
+    color: black;
     -webkit-transition: 0.25s;
     -moz-transition: 0.25s;
     -o-transition: 0.25s;
