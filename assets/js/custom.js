@@ -1,12 +1,22 @@
 var x = 'foo';
 $(document).ready(function() {
 	$('#main').fadeIn(600);
+	$("#alert").hide();
+	$("#follow").click(function() {
+		$("#alert").show();
 	});
+	});
+
+
 
 ///////////////////////////////////
 ////  LOGIN FUNCTIONS////
 /////////////////////////////////
 	
+
+
+
+
 $("#modalConfirm").click(function() {
 	url = "http://bkbdtimesheet-backend.herokuapp.com/submit";
 	jsonSubmit(url);
