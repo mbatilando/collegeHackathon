@@ -6,13 +6,38 @@
 	  <link rel="stylesheet" href="assets/css/custom.css" />
 	  <link rel="stylesheet" href="assets/css/flat-ui.css" />
 	  <link rel="stylesheet" href="assets/css/style.css" />
+	  <link rel="stylesheet" href="assets/css/college.css" />
 	  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	  <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 	  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	  <script type="text/javascript" src="assets/js/custom.js"></script>
 	  <script type="text/javascript" src="assets/js/jquery.carouFredSel.js"></script>
+	  <script type="text/javascript" src="assets/js/college.js"></script>
+
 	</head>
 	<body>
+		<div class="row clearfix" id="topNavBar">
+			<ul>
+				<li id="login">
+					<a href="#" id="login-trigger">Log in <span>&#x25BC;</span></a>
+				<div id="login-content">
+					<form>
+						<fieldset id="inputs">
+							<input id="username" type="email" name="Email" placeholder="Your email address" required>   
+							<input id="password" type="password" name="Password" placeholder="Password" required>
+						</fieldset>
+						<fieldset id="actions">
+							<input type="submit" id="submit" value="Log in">
+							<label><input type="checkbox" checked="checked"> Keep me signed in</label>
+						</fieldset>
+					</form>
+				</div>  
+				</li>
+				<li>
+					<a href="#" id="settings">Settings</a>
+				</li>
+			</ul>
+		</div>
 		<div class="row">
 			<div id="sideNavBar" class="span5">
 				<a href="#" class="btn btn-large btn-block btn-inverse">University of California, Berkeley</a>
@@ -50,11 +75,12 @@
 
 					<div class="tabbable"> <!-- Only required for left/right tabs -->
 					  <ul class="nav nav-tabs">
-					    <li class="active"><a href="#tab1" data-toggle="tab">Summary</a></li>
-					    <li><a href="#tab2" data-toggle="tab">Academics</a></li>
-					    <li><a href="#tab3" data-toggle="tab">Sports</a></li>
-					    <li><a href="#tab4" data-toggle="tab">Tution</a></li>
-					    <li><a href="#tab5" data-toggle="tab">Deadlines</a></li>
+					    <li class="active"><a href="#tab-summary" data-toggle="tab">Summary</a></li>
+					    <li><a href="#tab-academics" data-toggle="tab">Academics</a></li>
+					    <li><a href="#tab-sports" data-toggle="tab">Sports</a></li>
+					    <li><a href="#tab-tuition" data-toggle="tab">Tution</a></li>
+					    <li><a href="#tab-deadlines" data-toggle="tab">Deadlines</a></li>
+					    <li><a href="#tab-requirements" data-toggle="tab">Requirements</a></li>
 					  </ul>
 					  <div class="tab-content">
 					    <div class="tab-pane active" id="tab1">
@@ -66,10 +92,10 @@
 							    <img src="assets/img/berkeley5.jpg" width="100" />
 							    <img src="assets/img/berkeley6.jpg" width="100" />
 							</div>
-
+					    <div class="tab-pane active" id="tab-summary">
 					      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tellus tortor, accumsan non hendrerit non, lacinia ut dui. Pellentesque in sapien vel mi feugiat adipiscing. Suspendisse pulvinar ipsum a velit molestie imperdiet. Nam enim metus, egestas ac condimentum a, dictum non enim. Proin dapibus sollicitudin facilisis. Proin sed magna tortor. Nulla leo nunc, volutpat vitae tincidunt eget, faucibus id metus. Quisque tincidunt bibendum eros, quis tempor magna vehicula ac. Pellentesque ac augue id leo vulputate dapibus. Mauris rutrum nulla in magna ultrices tincidunt. Nam vestibulum, diam vel porttitor vehicula, velit magna tincidunt felis, ut pharetra lectus ligula at nulla. Curabitur id leo velit, in malesuada orci. Mauris euismod augue ut nulla consectetur a pharetra purus molestie.</p>
 					    </div>
-					    <div class="tab-pane" id="tab2">
+					    <div class="tab-pane" id="tab-academics">
 					    	<ul class="rating-w-fonts">
 								<li class="rated">R</li>
 								<li class="rated">R</li>
@@ -79,7 +105,7 @@
 							</ul>
 					      <p>Aliquam mattis tortor non sem scelerisque ornare semper massa scelerisque. Nunc id nisi et nisi aliquam suscipit. Curabitur eget quam ipsum, at bibendum turpis. Mauris non lacinia leo. Cras ornare pulvinar ornare. Vivamus eu convallis nisi. Vivamus a dui id enim placerat placerat. Vestibulum rutrum consectetur rhoncus. Ut iaculis, lectus eget aliquam egestas, justo ipsum gravida ligula, non porta mauris neque id diam. Sed sit amet eleifend ligula. Cras id massa felis. Nullam id odio leo. Donec mollis, erat vitae pellentesque consequat, lorem leo ultricies neque, ac sodales tellus dui a justo. Ut aliquam ligula eu libero congue sollicitudin. Suspendisse imperdiet elit placerat nisl molestie scelerisque sed vitae nibh. Integer lacus ipsum, malesuada vel ornare at, tincidunt et lacus.</p>
 					    </div>
-					    <div class="tab-pane" id="tab3">
+					    <div class="tab-pane" id="tab-sports">
 					    	<ul class="rating-w-fonts">
 								<li class="rated">R</li>
 								<li class="rated">R</li>
@@ -89,7 +115,7 @@
 							</ul>
 					      <p>Curabitur venenatis arcu nec magna hendrerit imperdiet. Nunc vestibulum felis non metus dignissim luctus. Duis imperdiet condimentum diam at tristique. Duis a purus turpis. Nullam consectetur lorem ac justo feugiat cursus. Suspendisse turpis dolor, volutpat id placerat vel, tempor at ante. Proin imperdiet molestie molestie. Curabitur aliquet ipsum sit amet nisi pharetra venenatis. Maecenas tempor laoreet nulla sit amet posuere. Curabitur velit diam, mollis at posuere in, congue consequat felis. Mauris id orci aliquet risus tempor ultricies. Donec non purus ac erat auctor molestie. Sed molestie pretium justo dictum auctor. Maecenas id elit massa. Suspendisse nec urna non mauris sagittis tempor.</p>
 					    </div>
-					    <div class="tab-pane" id="tab4">
+					    <div class="tab-pane" id="tab-tuition">
 					    	<ul class="rating-w-fonts">
 								<li class="rated">R</li>
 								<li class="rated">R</li>
@@ -99,13 +125,16 @@
 							</ul>
 					      <p>Praesent tempus commodo magna, ac placerat quam bibendum et. Pellentesque dictum vulputate ligula ac euismod. Maecenas elementum rutrum enim, eget accumsan nulla vehicula in. Nam eros purus, volutpat sit amet interdum in, laoreet non leo. Praesent in sem orci. Fusce sit amet sapien sem, varius facilisis dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque nec nisi nec tellus suscipit mattis. Maecenas placerat, justo nec tempus dictum, metus neque iaculis ipsum, et faucibus urna est nec nulla. Aliquam erat volutpat. Phasellus lectus turpis, tincidunt eu sagittis vitae, vulputate vel tellus. Sed blandit massa a mi malesuada lobortis. Nulla eleifend leo elementum justo placerat elementum. Nam urna eros, rutrum ut consectetur et, dapibus nec felis. Sed venenatis ipsum ut justo commodo ut sagittis mauris mollis.</p>
 					    </div>
-					    <div class="tab-pane" id="tab5">
+					    <div class="tab-pane" id="tab-deadlines">
 					      <p>Nullam diam lacus, mollis id malesuada sit amet, ultrices ac nisl. Quisque a leo sed enim tempor tincidunt ac at leo. Praesent nec semper orci. Aenean id dui sapien, id dictum massa. Sed et quam nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean ante lectus, elementum ut varius at, dignissim non diam. Vivamus metus leo, tempus sed fermentum quis, feugiat id orci. Vivamus sit amet enim dui, porta facilisis nunc. Fusce imperdiet facilisis ante, ac pellentesque elit pharetra ac. Aenean erat nisi, venenatis et varius id, scelerisque vitae elit. Mauris tincidunt leo ultrices est tempor sagittis dapibus felis accumsan. Pellentesque et justo a augue malesuada dapibus. Suspendisse potenti. Integer in sapien ut tortor porttitor dictum.</p>
+					    </div>
+					    <div class="tab-pane" id="tab-requirements">
+					      <p>Requirements Nullam diam lacus, mollis id malesuada sit amet, ultrices ac nisl. Quisque a leo sed enim tempor tincidunt ac at leo. Praesent nec semper orci. Aenean id dui sapien, id dictum massa. Sed et quam nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean ante lectus, elementum ut varius at, dignissim non diam. Vivamus metus leo, tempus sed fermentum quis, feugiat id orci. Vivamus sit amet enim dui, porta facilisis nunc. Fusce imperdiet facilisis ante, ac pellentesque elit pharetra ac. Aenean erat nisi, venenatis et varius id, scelerisque vitae elit. Mauris tincidunt leo ultrices est tempor sagittis dapibus felis accumsan. Pellentesque et justo a augue malesuada dapibus. Suspendisse potenti. Integer in sapien ut tortor porttitor dictum.</p>
 					    </div>
 					  </div>
 					</div>
 				</div>
-				<div class="Flexible-container">
+				<div id="section-map" class="Flexible-container">
 					<iframe src="http://www.map-generator.org/c684921c-3332-4e19-b64f-427c84ee8f69/iframe-map.aspx" scrolling="no" height="300px" width="700px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 				</div>
 			</div>
