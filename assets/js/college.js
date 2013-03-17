@@ -38,7 +38,7 @@ $(document).ready(function() {
 			var liNode = $('<li>');
 			var html = '';
 			html += deadlineInfo.day + '-' + deadlineInfo.month + '-' + deadlineInfo.year + " at " + deadlineInfo.time;
-			html += " " + deadlineInfo.title;
+			html += ": " + deadlineInfo.title;
 			liNode.html(html);
 			return liNode;
 		};
@@ -51,7 +51,8 @@ $(document).ready(function() {
 				if(key === 'deadlines') {
 					if(obj && obj.length > 0) {
 						var ulNode = $("<ul>");
-						for(var deadlineInfo in obj) {
+						for(var deadlineInfoKey in obj) {
+							var deadlineInfo = obj[deadlineInfoKey];
 							ulNode.append(createDeadlineNode(deadlineInfo));
 						}
 						tab.html('').append(ulNode);
