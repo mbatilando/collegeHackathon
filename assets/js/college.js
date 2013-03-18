@@ -1,4 +1,9 @@
 $(document).ready(function() {
+	$('#alert').hide();
+
+	$("#follow").click(function() {
+		$("#alert").toggle();
+	});
 
 	$('#qa-table').hide();
 
