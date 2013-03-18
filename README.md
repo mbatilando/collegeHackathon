@@ -1,4 +1,4 @@
 collegeHackathon
 ================
 
-For the College Hackathon
+A Web application used for college readiness. Built during CollegeReady Hackathon.
