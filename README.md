@@ -1,4 +1,4 @@
-collegeHackathon
+Students' Edge
 ================
 
-A Web application used for college readiness. Built during CollegeReady 6-Hr. Hackathon.
+An all-in-one student portal for discovering and applying to different colleges.
